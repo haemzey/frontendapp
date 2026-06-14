@@ -1,0 +1,415 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #f7fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  padding: 24px;
+  background: linear-gradient(180deg, #f3f7ff 0%, #edf2ff 100%);
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 24px;
+  min-height: calc(100vh - 48px);
+  position: sticky;
+  top: 24px;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.brand-label {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.sidebar small,
+.sidebar p {
+  margin: 0;
+}
+
+nav {
+  display: grid;
+  gap: 10px;
+}
+
+.nav-button {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 14px 16px;
+  border-radius: 16px;
+  color: #334155;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.sidebar-help {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 18px 16px;
+  margin-top: 24px;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.profile-chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #eff6ff;
+  padding: 12px 16px;
+  border-radius: 18px;
+}
+
+.profile-chip span {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #3b82f6;
+  color: white;
+  font-weight: 700;
+}
+
+.page-content {
+  display: grid;
+  gap: 24px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-header .eyebrow,
+.eyebrow {
+  margin: 0 0 4px;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-header h2,
+.topbar h1,
+.dashboard-page h2,
+.accounts-page h2,
+.payments-page h2,
+.settings-page h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.1;
+  color: #0f172a;
+}
+
+.primary-button,
+.secondary-button {
+  border: none;
+  padding: 14px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary-button {
+  background: #e0f2fe;
+  color: #1d4ed8;
+}
+
+.summary-grid,
+.accounts-grid,
+.payees-grid,
+.settings-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.summary-card,
+.account-card,
+.payee-card,
+.settings-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+}
+
+.summary-card span {
+  display: block;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.summary-card strong {
+  display: block;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.recent-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 9999px;
+  font-weight: 700;
+}
+
+.positive {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.negative {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.transaction-list {
+  display: grid;
+  gap: 18px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: #f8fafc;
+}
+
+.transaction-title,
+.account-description,
+.payee-card p,
+.payee-card small,
+.transaction-meta {
+  margin: 0;
+}
+
+.transaction-title {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.transaction-meta,
+.payee-card small {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.accounts-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.account-card .account-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.account-card .account-top span {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.account-card .account-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.account-card .account-balance strong {
+  font-size: 1.65rem;
+}
+
+.account-card .account-description {
+  color: #475569;
+}
+
+.payees-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.payee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.payee-id {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.payee-id span {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: #c7d2fe;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.payee-amount strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.payee-amount small {
+  color: #475569;
+}
+
+.settings-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.settings-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.settings-card p {
+  color: #475569;
+}
+
+@media (max-width: 1200px) {
+  .summary-grid,
+  .accounts-grid,
+  .payees-grid,
+  .settings-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .sidebar {
+    min-height: auto;
+    position: relative;
+    top: 0;
+  }
+
+  .topbar,
+  .app-shell {
+    border-radius: 24px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payees-grid,
+  .settings-grid,
+  .accounts-grid,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
