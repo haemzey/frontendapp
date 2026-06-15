@@ -18,6 +18,13 @@ RUN rm -rf ./*
 
 COPY --from=build /my-app/dist ./
 
+RUN adduser -D hamza \
+  && chown -R hamza:hamza /usr/share/nginx/html \
+  && chown -R hamza:hamza /var/cache/nginx \
+  && chown -R hamza:hamza /run   
+
+USER hamza 
+
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"] 
