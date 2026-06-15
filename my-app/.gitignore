@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.dockerignore
+
 README.md
 node_modules
 dist
